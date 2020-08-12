@@ -1,4 +1,4 @@
-import torch; assert torch.__version__=='0.4.1.post2', 'need pytorch 0.4.1'
+import torch; #assert torch.__version__=='0.4.1.post2', 'need pytorch 0.4.1'
 import numpy as np
 import pandas as pd
 import pickle
@@ -10,13 +10,11 @@ from torch.utils.data import Dataset, DataLoader
 
 def get_cv_idxs(n, cv_idx=0, val_pct=0.2, seed=42):
     """ Get a list of index values for Validation set from a dataset
-
     Arguments:
         n : int, Total number of elements in the data set.
         cv_idx : int, starting index [idx_start = cv_idx*int(val_pct*n)]
         val_pct : (int, float), validation set percentage
         seed : seed value for RandomState
-
     Returns:
         list of indexes
     """
@@ -31,7 +29,6 @@ def split_by_idx(idxs, *a):
     """
     Split each array passed as *a, to a pair of arrays like this (elements selected by idxs,  the remaining elements)
     This can be used to split multiple arrays containing training data to validation and training set.
-
     :param idxs [int]: list of indexes selected
     :param a list: list of np.array, each array should have same amount of elements in the first dimension
     :return: list of tuples, each containing a split of corresponding array from *a.

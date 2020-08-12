@@ -1,8 +1,10 @@
 .ipynb_checkpoints
-.DS_Store
+*.DS_Store
 .idea
-data/
-models/
+/ml-20m
+/ml-25m
+/._ml-20m
+/._ml-25m
 *.pyc
 src/__pycache__/
 *.pkl
